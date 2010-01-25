@@ -1,0 +1,5 @@
+Autotest.add_hook :initialize do |at|
+  %w{.git .svn .DS_Store db log tmp vendor .sqlite3}.each do |ex| 
+    at.add_exception(ex) 
+  end
+end
